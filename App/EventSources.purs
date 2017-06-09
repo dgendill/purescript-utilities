@@ -1,3 +1,8 @@
+-- | Event sources to use with Halogen, e.g.
+-- | ```
+-- | H.subscribe $ HES.eventSource' (onDocumentMouseUp) (Just <<< H.request <<< DocumentClick)
+-- | H.subscribe $ HES.eventSource' ((ignoreInside wrapper) >>> onDocumentMouseUp) (Just <<< H.request <<< DocumentClick)
+-- | ```
 module App.EventSources (
   onMouseUp,
   onDocumentMouseUp,
